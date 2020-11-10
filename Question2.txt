@@ -1,0 +1,28 @@
+public class Main {
+  public static void main(String[] args) {
+	    String s = " Tempar ip";
+	    reverser(s);
+  }
+   public static void reverser(String s) {
+       
+	    StringBuffer sout = new StringBuffer("");
+    	int i = 0;
+    	int j = 0;
+    	int len = s.length();
+    	int fours = len/4;
+    	int foursrem = len%4;
+    	
+    	String sarray[] = s.split(" ");//System.out.println(sarray);
+        
+        for (i = 0;i<fours ;i++ ) {
+            for (j = 3;j>=0 ;j-- ) {
+                sout.append(s.charAt(i*4+j));
+                //System.out.println(s.charAt(i*4+j));
+            }
+        }
+        for (j = foursrem-1;j>=0 ;j--) {
+            sout.append(s.charAt(fours*4+j));
+        }
+    	System.out.println(sout);
+   }
+}
